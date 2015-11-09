@@ -1,0 +1,18 @@
+{
+  "name": "reflect-to-canvas",
+  "version": "0.0.0",
+  "description": "Reflect your image to canvas",
+  "license": "MIT",
+  "repository": "ragingwind/reflect-to-canvas",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "files": [
+    "reflect-to-canvas.js"
+  ],
+  "keywords": [
+    ""
+  ]
+}
