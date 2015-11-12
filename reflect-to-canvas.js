@@ -1,14 +1,20 @@
 (function() {
 	'use strict';
-	Element.prototype.reflectToCanvas = function (target, opts) {
-		opts = opts || {
-			reflection: 0.5,
-			bgcolor: '#000000',
-			height:246,
-			width:396
-	 };
 
-		var ctx = target.getContext("2d");
+	function reflectToCanvas (dest, opts) {
+		opts = opts || {
+			reflection: 0.5
+		};
+
+		if (!opts.width) {
+			opts.width = this.offsetWidth;
+		}
+
+		if (!opts.height) {
+			opts.height = this.offsetHeight;
+		}
+
+		var ctx = dest.getContext("2d");
 		var gradient = ctx.createLinearGradient(0, 0, 0, opts.height * opts.reflection);
 
 		gradient.addColorStop(1, "rgba(255, 255, 255, 1.0)");
@@ -28,5 +34,9 @@
 
 		ctx = null;
 		gradient = null;
- };
+	}
+
+	HTMLImageElement.prototype.reflectToCanvas = reflectToCanvas;
+	HTMLVideoElement.prototype.reflectToCanvas = reflectToCanvas;
+	HTMLCanvasElement.prototype.reflectToCanvas = reflectToCanvas;
 })();
