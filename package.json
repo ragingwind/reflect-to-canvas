@@ -1,6 +1,6 @@
 {
   "name": "reflect-to-canvas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Reflect your image to canvas",
   "license": "MIT",
   "repository": "ragingwind/reflect-to-canvas",
